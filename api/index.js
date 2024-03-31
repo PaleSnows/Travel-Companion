@@ -5,19 +5,22 @@ import dotenv from "dotenv";
 dotenv.config();
 import authRouter from "./routes/auth.route.js";
 
-const app = express();
 
 mongoose
-  .connect(process.env.MONGO)
-  .then(() => {
-    console.log("Successfully connected to mongodb");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+.connect(process.env.MONGO)
+.then(() => {
+  console.log("Successfully connected to mongodb");
+})
+.catch((err) => {
+  console.log(err);
+});
 
-app.use(cors());
+const app = express();
 app.use(express.json());
+
+app.listen(3000, () => {
+  console.log("Server running...");
+});
 
 app.use("/api/auth", authRouter);
 
@@ -31,6 +34,3 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server running...");
-});
