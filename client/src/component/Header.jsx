@@ -17,6 +17,9 @@ const Header = () => {
         <Link to={'/destinations'}>
           <h1 className="text-lg font-semibold text-center text-slate-800">Destinations</h1>
         </Link>
+        <Link to={'/service'}>
+          <h1 className="text-lg font-semibold text-center text-slate-800">Service</h1>
+        </Link>
       </div>
       <div className="flex gap-3">
         <SearchBar />
