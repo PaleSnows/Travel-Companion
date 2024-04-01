@@ -1,4 +1,6 @@
 import React from "react";
+import {} from 'react-icons'
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -11,7 +13,7 @@ const Profile = () => {
           <input className="bg-slate-600 p-4 rounded-md" type="password" placeholder="Password"/>
           <button className="mt-2 p-4 bg-slate-900 rounded-md">Update</button>
         </div>
-        <p>Sign In</p>
+        <Link to={'/sign-up'}>Sign up</Link>
       </form>
     </div>
   );
