@@ -50,7 +50,7 @@ const SignIn = () => {
   console.log(input);
   return (
     <>
-      <div className="text-center flex flex-col h-screen mt-[70px] ">
+      <div className="text-center flex flex-col h-screen bg-blue-100 pt-[70px] ">
         <h1 className="font-semibold text-3xl">Sign in</h1>
         <form
           onSubmit={formHandler}

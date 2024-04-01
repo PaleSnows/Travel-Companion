@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [input, setInput] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate=useNavigate()
 
   const changeHandler = (e) => {
     setInput({ ...input, [e.target.id]: e.target.value });
@@ -29,6 +30,7 @@ const SignUp = () => {
       }
       setLoading(false);
       setError(null);
+      navigate('/sign-in')
      
       //  console.log(data);
     } catch (error) {
@@ -40,7 +42,7 @@ const SignUp = () => {
   console.log(input);
   return (
     <>
-      <div className="text-center flex flex-col h-screen mt-[70px] ">
+      <div className="text-center flex flex-col h-screen bg-blue-100 pt-[70px] ">
         <h1 className="font-semibold text-3xl">Sign up</h1>
         <form
           onSubmit={formHandler}
