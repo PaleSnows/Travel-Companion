@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignIn = () => {
   const [input, setInput] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const changeHandler = (e) => {
     setInput({ ...input, [e.target.id]: e.target.value });
@@ -14,7 +15,7 @@ const SignUp = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/signup", {
+      const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,11 +26,12 @@ const SignUp = () => {
       if (data.success === false) {
         setLoading(false);
         setError(data.message);
-        return
+        return;
       }
       setLoading(false);
       setError(null);
-     
+      navigate("/");
+
       //  console.log(data);
     } catch (error) {
       setLoading(false);
@@ -41,19 +43,11 @@ const SignUp = () => {
   return (
     <>
       <div className="text-center flex flex-col h-screen mt-[70px] ">
-        <h1 className="font-semibold text-3xl">Sign up</h1>
+        <h1 className="font-semibold text-3xl">Sign in</h1>
         <form
           onSubmit={formHandler}
           className="flex items-center flex-col mt-2"
         >
-          <input
-            type="text"
-            name=""
-            id="username"
-            placeholder="Username"
-            className="p-4 rounded-md m-2 bg-slate-200 w-[500px]"
-            onChange={changeHandler}
-          />
           <input
             type="email"
             name=""
@@ -75,14 +69,17 @@ const SignUp = () => {
           </button>
         </form>
         <div className="flex justify-center gap-1 mt-3">
-          <p className="font-semibold text-lg">Have an account?</p>
-          <Link to={'/sign-in'} className="text-red-400 text-lg font-bold">Sign in</Link>
+          <p className="font-semibold text-lg">Dont have an account?</p>
+          <Link to={"/sign-up"} className="text-red-400 text-lg font-bold">
+            Sign up
+          </Link>
         </div>
-        {loading?"Loading...":""}
-        {error?<p className="text-red-500 p-3">{error}</p>:""}
+
+        {loading ? "Loading..." : ""}
+        {error ? <p className="text-red-500 p-3">{error}</p> : ""}
       </div>
     </>
   );
 };
 
-export default SignUp;
+export default SignIn;
