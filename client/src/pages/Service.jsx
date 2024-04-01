@@ -5,7 +5,7 @@ import { BsGlobe } from "react-icons/bs";
 const Service = () => {
   return (
     <>
-      <div className="h-screen flex flex-row justify-center bg-blue-100">
+      <div className="sm:h-screen  flex flex-col sm:flex-row justify-center bg-blue-100">
         <div className="mx-[30px] my-[100px]">
           <h1 className="uppercase font-semibold text-3xl">
             Luxury Included vacation for two people
@@ -16,7 +16,7 @@ const Service = () => {
             enjoy what the vast earth has to offer experience ultimate
             satifsaction, fun and more.
           </p>
-          <div className="flex flex-row gap-28 py-12">
+          <div className="flex flex-col sm:flex-row gap-28 py-12">
             <div className="py-8">
               <RiCustomerService2Fill size={30} className="text-blue-700" />
               <h1 className="text-lg font-semibold">Leading Service</h1>
@@ -35,7 +35,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className="my-[50px]">
+        <div className="my-[50px] p-1">
           <div className="border border-black">
             <div className="p-3 m-1 w-[450px]">
               <h1 className="uppercase text-center">
@@ -67,9 +67,9 @@ const Service = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-blue-100">
-        <h1 className="mx-[515px] text-lg font-semibold">Contact</h1>
-        <p className=" mx-[505px] p-3 text-lg">
+      <div className="sm:h-screen pb-[100px] pt-[130px] sm:pt-1 sm:pb-1 bg-blue-100">
+        <h1 className="mx-2 sm:mx-[515px] text-lg font-semibold">Contact</h1>
+        <p className="mx-2 sm:mx-[505px] sm:p-3 text-lg">
           Submit the form below to contact :)
         </p>
         <div className="flex flex-col gap-3 items-center p-3">
@@ -78,13 +78,13 @@ const Service = () => {
             name=""
             id=""
             placeholder="Name"
-            className="w-[500px] p-2"
+            className="w-[420px] sm:w-[500px] p-2"
           />
           <input
             type="Email"
             name=""
             id=""
-            className="w-[500px] p-2"
+            className="w-[420px] sm:w-[500px] p-2"
             placeholder="email"
           />
           <textarea
@@ -92,10 +92,12 @@ const Service = () => {
             id=""
             cols="30"
             rows="10"
-            className="w-[500px] p-2"
+            className="w-[420px] sm:w-[500px] p-2"
             placeholder="Message"
           ></textarea>
-          <button className="p-3 font-semibold bg-slate-500 text-slate-100 w-[150px] rounded">Submit</button>
+          <button className="p-3 font-semibold bg-slate-500 text-slate-100 w-[150px] rounded">
+            Submit
+          </button>
         </div>
       </div>
     </>

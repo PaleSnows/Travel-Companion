@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-slate-200 p-10">
-      <div className="flex justify-between mx-[100px] ">
+    <div className="bg-black text-slate-200 p-4 sm:p-10 ">
+      <div className="flex justify-between  sm:mx-[100px] ">
         <div className="flex flex-col gap-2">
           <h1 className="text-lg font-semibold">Pages</h1>
           <Link>
@@ -23,11 +30,20 @@ const Footer = () => {
           <h2>companion@gmail.com</h2>
         </div>
         <div className="">
-          <h1 className="text-lg font-semibold">Support</h1>
+          <h1 className="text-lg font-semibold ">Support</h1>
+          <div className="flex flex-col sm:flex-row items-center mt-1 gap-3">
+            <FaFacebook />
+            <FaLinkedin />
+            <FaGithub />
+            <FaYoutube />
+            <FaTwitter />
+          </div>
         </div>
       </div>
-      <hr className="mt-5 ml-[85px] " />
-      <p className="ml-[85px] py-3">@ Travel Companion , All Rights Reserverd</p>
+      <hr className="mt-5 sm:ml-[85px] " />
+      <p className="sm:ml-[85px] py-3">
+        @ Travel Companion , All Rights Reserverd
+      </p>
     </div>
   );
 };

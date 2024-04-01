@@ -10,23 +10,23 @@ const Home = () => {
     <div className=" bg-blue-100 h-full">
       <div className=" h-screen bg-blue-100">
         <h1 className="absolute text-white text-2xl m-40 font-semibold italic">
-          Welcome To Travel Companion ,
+          Welcome To Travel Companion,
           <br />
           where you will find the best partner to guide your jorney
         </h1>
         <img src={h1} alt="" className="h-screen w-full object-cover" />
       </div>
-      <div className=" py-16 px-5">
-        <h1 className="text-3xl mt-10 l-10  font-semibold py-3 px-1 italic text-blue-600 absolute">
+      <div className=" py-10 px-5">
+        <h1 className="text-3xl mt-8 l-10  font-semibold py-3 px-1 italic text-blue-600 inline-block sm:absolute ">
           Scenic Spots
         </h1>
         <div className="   p-10  rounded-lg bg-blue-100 shadow-lg">
           <p className="text-lg p-3 font-semibold text-center">
             Check out, some of our best recommended places to travel
           </p>
-          <div className="grid grid-rows-1 grid-flow-col  gap-8 ">
+          <div className="grid sm:grid-cols-2 grid-flow-row sm:grid-rows-1 sm:grid-flow-col gap-8 ">
             <img
-              className="h-[350px] rounded-md w-[400px] object-cover hover:scale-105 transition-scale duration-300 shadow-2xl"
+              className="h-[350px] rounded-md w-[400px] object-cover  hover:scale-105 transition-scale duration-300 shadow-2xl"
               src={h2}
               alt=""
             />

@@ -42,7 +42,7 @@ const SignUp = () => {
   console.log(input);
   return (
     <>
-      <div className="text-center flex flex-col h-screen bg-blue-100 pt-[70px] ">
+      <div className="text-center flex flex-col pb-[160px] sm:pb-1 sm:h-screen bg-blue-100 pt-[100px] sm:pt-[70px] ">
         <h1 className="font-semibold text-3xl">Sign up</h1>
         <form
           onSubmit={formHandler}
@@ -53,7 +53,7 @@ const SignUp = () => {
             name=""
             id="username"
             placeholder="Username"
-            className="p-4 rounded-md m-2 bg-slate-200 w-[500px]"
+            className="p-4 rounded-md m-2 bg-slate-200 w-[320px] sm:w-[500px]"
             onChange={changeHandler}
           />
           <input
@@ -61,7 +61,7 @@ const SignUp = () => {
             name=""
             id="email"
             placeholder="email"
-            className="p-4 rounded-md m-2 bg-slate-200 w-[500px]"
+            className="p-4 rounded-md m-2 bg-slate-200  w-[320px] sm:w-[500px]"
             onChange={changeHandler}
           />
           <input
@@ -69,10 +69,10 @@ const SignUp = () => {
             name=""
             id="password"
             placeholder="password"
-            className="p-4 rounded-md m-2 bg-slate-200 w-[500px]"
+            className="p-4 rounded-md m-2 bg-slate-200 w-[320px] sm:w-[500px]"
             onChange={changeHandler}
           />
-          <button className="bg-slate-800 text-slate-50 rounded-lg p-4 w-[500px] mt-2  text-lg font-semibold">
+          <button className="bg-slate-800 text-slate-50 rounded-lg p-4 w-[320px] sm:w-[500px] mt-2  text-lg font-semibold">
             Submit
           </button>
         </form>

@@ -83,10 +83,10 @@ const Profile = () => {
   };
 
   return (
-    <div className="text-center h-screen bg-blue-100 flex justify-center ">
+    <div className="text-center pb-[100px] sm:pb-1 sm:h-screen bg-blue-100 flex justify-center ">
       <form onSubmit={formHandler} className="mt-20">
         <h1 className="text-3xl font-semibold mb-4">Profile</h1>
-        <div className="flex flex-col w-[450px] gap-5 text-white ">
+        <div className="flex flex-col w-[320px] sm:w-[450px] gap-5 text-white ">
           <input
             className="bg-slate-600 p-4 mb-2 rounded-md "
             type="text"

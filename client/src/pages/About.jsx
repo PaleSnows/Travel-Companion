@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="h-screen bg-blue-100">
+    <div className="h-full sm:h-screen bg-blue-100">
       <h1 className="text-center pt-8  text-2xl font-bold">About</h1>
-      <p className="p-2 flex m-4 text-lg text-slate-900 ">
+      <p className="p-2 flex mt-4 pb-4 text-lg text-slate-900 ">
         The About Page of our travel app serves as a captivating gateway for
         users to delve into the essence and ethos of our platform. In this
         digital realm of wanderlust, we are committed to fostering a community
