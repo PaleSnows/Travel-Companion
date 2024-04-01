@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <div className="p-5 flex justify-between items-center bg-blue-100 h-[80px]">
       <div className="text-3xl italic">
+        <Link to={'/'}>
         Travel <span className="text-blue-700 not-italic">Companion</span>
+        </Link>
       </div>
       <div className="flex flex-row gap-4">
         <Link to={"/"}>

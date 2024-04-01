@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Profile from "./pages/Profile";
 import Service from "./pages/Service";
+import PrivateRoute from "./component/PrivateRoute";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route  element={<PrivateRoute />} >
+          <Route path="/profile" element={<Profile/>}/>
+        </Route>
         <Route path="/service" element={<Service />} />
         
       </Routes>

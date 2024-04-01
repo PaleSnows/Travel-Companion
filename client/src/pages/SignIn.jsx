@@ -84,7 +84,7 @@ const SignIn = () => {
         </div>
 
         {loading ? "Loading..." : ""}
-        {error ? <p className="text-red-500 p-3">{error}</p> : ""}
+        
       </div>
     </>
   );
