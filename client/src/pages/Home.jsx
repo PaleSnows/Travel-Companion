@@ -3,14 +3,12 @@ import h1 from "../assets/travel.jpg";
 import h2 from "../assets/h2.jpg";
 import h3 from "../assets/h3.jpg";
 import h4 from "../assets/h4.jpg";
-import h5 from "../assets/h5.jpg";
-import h6 from "../assets/h6.jpg";
-import h7 from "../assets/h7.jpg";
+
 
 const Home = () => {
   return (
-    <div className=" ">
-      <div className=" ">
+    <div className=" bg-blue-100 h-full">
+      <div className=" h-screen bg-blue-100">
         <h1 className="absolute text-white text-2xl m-40 font-semibold italic">
           Welcome To Travel Companion ,
           <br />
@@ -18,11 +16,11 @@ const Home = () => {
         </h1>
         <img src={h1} alt="" className="h-screen w-full object-cover" />
       </div>
-      <div className=" my-10 p-5">
-        <h1 className="text-3xl mt-10 ml-10  font-semibold py-3 px-1 italic text-blue-600 absolute">
+      <div className=" py-16 px-5">
+        <h1 className="text-3xl mt-10 l-10  font-semibold py-3 px-1 italic text-blue-600 absolute">
           Scenic Spots
         </h1>
-        <div className="  p-10  rounded-lg bg-blue-200 shadow-lg">
+        <div className="   p-10  rounded-lg bg-blue-100 shadow-lg">
           <p className="text-lg p-3 font-semibold text-center">
             Check out, some of our best recommended places to travel
           </p>

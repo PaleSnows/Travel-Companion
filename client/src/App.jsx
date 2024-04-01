@@ -20,13 +20,12 @@ function App() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route  element={<PrivateRoute />} >
-          <Route path="/profile" element={<Profile/>}/>
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path="/service" element={<Service />} />
-        
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

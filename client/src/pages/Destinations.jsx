@@ -20,7 +20,7 @@ const Destinations = () => {
           <img src={d5} alt="" className="h-[320px] w-[500px]" />
         </div>
       </div>
-      <div className="h-screen">
+      <div className="h-screen pt-16">
         <h1 className="text-3xl italic font-semibold mt-10 ml-2 text-center p-2">Offers</h1>
         <div className="flex flow-row gap-5 p-2">
           <img src={h5} className="h-[460px] w-[502px] relative" alt="" />

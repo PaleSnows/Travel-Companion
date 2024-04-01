@@ -26,8 +26,8 @@ const Footer = () => {
           <h1 className="text-lg font-semibold">Support</h1>
         </div>
       </div>
-      <hr className="mt-5 " />
-      <p>@ Travel Companion Renzaki, All Rights Reserverd</p>
+      <hr className="mt-5 ml-[85px] " />
+      <p className="ml-[85px] py-3">@ Travel Companion , All Rights Reserverd</p>
     </div>
   );
 };
