@@ -24,7 +24,7 @@ const Home = () => {
           <p className="text-lg p-3 font-semibold text-center">
             Check out, some of our best recommended places to travel
           </p>
-          <div className="grid sm:grid-cols-2 grid-flow-row sm:grid-rows-1 sm:grid-flow-col gap-8 ">
+          <div className="grid sm:grid-cols-3 grid-flow-row sm:grid-rows-1 sm:grid-flow-col gap-8 ">
             <img
               className="h-[350px] rounded-md w-[400px] object-cover  hover:scale-105 transition-scale duration-300 shadow-2xl"
               src={h2}

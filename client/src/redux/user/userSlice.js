@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentUser: null,
@@ -7,56 +7,56 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
-    signInStart: (state, action) => {
+    signInStart: (state) => {
       state.loading = true;
     },
     signInSuccess: (state, action) => {
-      state.loading = false;
       state.currentUser = action.payload;
+      state.loading = false;
       state.error = null;
     },
     signInFailure: (state, action) => {
-      state.loading = false;
       state.error = action.payload;
+      state.loading = false;
     },
-    updateUserStart: (state, action) => {
+    updateUserStart: (state) => {
       state.loading = true;
     },
     updateUserSuccess: (state, action) => {
-      state.loading = false;
       state.currentUser = action.payload;
+      state.loading = false;
       state.error = null;
     },
     updateUserFailure: (state, action) => {
-      state.loading = false;
       state.error = action.payload;
+      state.loading = false;
     },
-    deleteUserStart: (state, action) => {
+    deleteUserStart: (state) => {
       state.loading = true;
     },
-    deleteUserSuccess: (state, action) => {
-      state.loading = false;
+    deleteUserSuccess: (state) => {
       state.currentUser = null;
+      state.loading = false;
       state.error = null;
     },
     deleteUserFailure: (state, action) => {
-      state.loading = false;
       state.error = action.payload;
+      state.loading = false;
     },
-    signoutUserStart: (state, action) => {
+    signoutUserStart: (state) => {
       state.loading = true;
     },
-    signoutUserSuccess: (state, action) => {
-      state.loading = false;
+    signoutUserSuccess: (state) => {
       state.currentUser = null;
+      state.loading = false;
       state.error = null;
     },
     signoutUserFailure: (state, action) => {
-      state.loading = false;
       state.error = action.payload;
+      state.loading = false;
     },
   },
 });
@@ -65,15 +65,15 @@ export const {
   signInStart,
   signInSuccess,
   signInFailure,
-  updateUserStart,
-  updateUserSuccess,
   updateUserFailure,
-  deleteUserStart,
-  deleteUserSuccess,
+  updateUserSuccess,
+  updateUserStart,
   deleteUserFailure,
-  signoutUserStart,
+  deleteUserSuccess,
+  deleteUserStart,
+  signoutUserFailure,
   signoutUserSuccess,
-  signoutUserFailure
+  signoutUserStart,
 } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -81,7 +81,7 @@ const SignUp = () => {
           <Link to={'/sign-in'} className="text-red-400 text-lg font-bold">Sign in</Link>
         </div>
         {loading?"Loading...":""}
-        {error?<p className="text-red-500 p-3">{error}</p>:""}
+        {error&&<p className="text-red-500 p-3">{error}</p>}
       </div>
     </>
   );
